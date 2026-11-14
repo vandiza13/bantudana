@@ -28,7 +28,7 @@ import { createClient, type Client } from "@libsql/client";
 import { drizzle, type LibSQLDatabase } from "drizzle-orm/libsql";
 import { migrate } from "drizzle-orm/libsql/migrator";
 import { join } from "node:path";
-import * as schema from "./schema";
+import * as schema from "./schema.js";
 
 let dbPromise: Promise<LibSQLDatabase<typeof schema>> | null = null;
 

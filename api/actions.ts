@@ -22,8 +22,8 @@
 // koneksi Turso dibuat sekali per cold start lewat getDb() di
 // server/src/db.ts, lalu dipakai ulang selama instans hangat.
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { Actions } from "./lib/actions";
-import { getDb } from "./lib/db";
+import { Actions } from "./lib/actions.js";
+import { getDb } from "./lib/db.js";
 
 type ActionDef = {
   request: { parse: (a: unknown) => unknown };

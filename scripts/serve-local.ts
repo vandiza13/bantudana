@@ -25,8 +25,8 @@ import { createServer, type IncomingMessage, type ServerResponse } from "node:ht
 import { existsSync, readFileSync } from "node:fs";
 import { extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import handler from "../api/actions";
-import healthz from "../api/healthz";
+import handler from "../api/actions.js";
+import healthz from "../api/healthz.js";
 
 const DIST_DIR = resolve(fileURLToPath(new URL(".", import.meta.url)), "..", "client", "dist");
 

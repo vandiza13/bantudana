@@ -54,10 +54,10 @@ defineAction,
 z,
 type ActionsModule,
 type Ctx,
-} from "./space-shim";
+} from "./space-shim.js";
 import { asc, desc, eq } from "drizzle-orm";
 import type { BatchItem } from "drizzle-orm/batch";
-import * as schema from "./schema";
+import * as schema from "./schema.js";
 
 // ---------------------------------------------------------------------------
 // Skema bersama
