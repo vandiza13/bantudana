@@ -6,7 +6,7 @@
 // pulls in any server runtime (bun:sqlite, file APIs, etc.). With
 // `verbatimModuleSyntax: true`, dropping `type` is a compile error.
 
-import type { Actions } from "../../server/src/actions";
+import type { Actions } from "../../api/lib/actions";
 import { createActionClient } from "./standalone-shim";
 
 export const api = createActionClient<typeof Actions>();
