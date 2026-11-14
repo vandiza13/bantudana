@@ -43,7 +43,7 @@ Karena itu paket ini mengubah tiga hal — dan hanya tiga hal itu:
 | Database | File SQLite `/data/app.db` (volume persisten) | **Turso** (libSQL remote — dialek SQLite yang sama, skema & migrasi tidak berubah) |
 
 Yang **tidak** berubah: seluruh logika bisnis di
-`server/src/actions.ts` dan `server/src/schema.ts` disalin apa adanya
+`api/lib/actions.ts` dan `api/lib/schema.ts` disalin apa adanya
 (model tenor bulan + bunga flat %/bulan, Pengaturan Admin, bunga
 keterlambatan 0,1%/hari, peran Admin/User, alur bayar cicilan
 ajukan → menunggu → Admin konfirmasi/tolak, laporan/CSV, pengingat
@@ -306,14 +306,14 @@ bantudana-vercel/
     vite.config.ts       # build Vite -> client/dist
     tsconfig.json
     src/                 # React 19 — disalin apa adanya
-  server/src/
-    actions.ts           # logika bisnis — disalin apa adanya
-    schema.ts            # skema Drizzle — disalin apa adanya
-    space-shim.ts        # pengganti @hatch/space-sdk — disalin
-    db.ts                # BARU: Turso (libsql://) + migrasi
   api/
     actions.ts           # Vercel Serverless Function POST /api/actions
     healthz.ts           # Vercel Serverless Function GET /api/healthz
+    lib/
+      actions.ts         # logika bisnis — disalin apa adanya
+      schema.ts          # skema Drizzle — disalin apa adanya
+      space-shim.ts      # pengganti @hatch/space-sdk — disalin
+      db.ts              # Turso (libsql://) + migrasi
     tsconfig.json
   drizzle/               # migrasi 0001–0007 — disalin apa adanya
   scripts/

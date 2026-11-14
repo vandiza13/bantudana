@@ -1,1 +1,1 @@
-{"compilerOptions":{"lib":["ES2022"],"tsBuildInfoFile":"./.tsbuildinfo.api","types":["node"]},"extends":"../tsconfig.base.json","include":["./**/*","../server/src/**/*","../scripts/**/*"]}
+{"compilerOptions":{"lib":["ES2022"],"tsBuildInfoFile":"./.tsbuildinfo.api","types":["node"]},"extends":"../tsconfig.base.json","include":["./**/*","../scripts/**/*"]}
