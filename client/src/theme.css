@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@import "tailwindcss-safe-area";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-system, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-lg: 18px;
+  --text-lg--line-height: 28px;
+  --text-xl: 20px;
+  --text-xl--line-height: 28px;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 32px;
+  --text-3xl: 30px;
+  --text-3xl--line-height: 36px;
+  --text-4xl: 36px;
+  --text-4xl--line-height: 40px;
+  --text-5xl: 48px;
+  --text-5xl--line-height: 52px;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg: #f6f8f7;
+  --surface: #ffffff;
+  --surface-2: #eef3f1;
+  --text: #12211d;
+  --dim: #5c6f68;
+  --border: #dde6e2;
+  --accent: #0f766e;
+  --accent-strong: #0b5a54;
+  --accent-soft: #e0f2ef;
+  --danger: #dc2626;
+  --danger-soft: #fdecec;
+  --warn: #b45309;
+  --warn-soft: #fdf1de;
+  --ok: #15803d;
+  --ok-soft: #e5f4ea;
+  --radius: 14px;
+  --space-surface: var(--surface);
+  --space-surface-alt: var(--surface-2);
+  --space-muted: var(--dim);
+  --space-border: var(--border);
+  --space-accent: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c1210;
+    --surface: #151d1a;
+    --surface-2: #1d2824;
+    --text: #edf3f0;
+    --dim: #93a69d;
+    --border: #26332e;
+    --accent: #2dd4bf;
+    --accent-strong: #5eead4;
+    --accent-soft: #123330;
+    --danger: #f87171;
+    --danger-soft: #3a1d1d;
+    --warn: #fbbf24;
+    --warn-soft: #38300f;
+    --ok: #4ade80;
+    --ok-soft: #14301f;
+  }
+}
+
+/* Phone tap targets: at least 36px tall for comfortable touch. */
+@layer base {
+  button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) {
+    min-height: 2.25rem;
+  }
+  body {
+    font-family: var(--font-sans);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,45 @@
+/* Pengganti styles.css dari @hatch/space-sdk (hanya bagian yang dipakai
+ * BantuDana). Di Muse file itu juga mengatur offset header hosting —
+ * di standalone tidak ada header hosting, jadi --header-height = 0.
+ * Safe-area notch/gesture bar tetap ditangani lewat env(). */
+
+:root {
+  color-scheme: light dark;
+  --twsa-safe-area-inset-top: env(safe-area-inset-top, 0px);
+  --twsa-safe-area-inset-right: env(safe-area-inset-right, 0px);
+  --twsa-safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+  --twsa-safe-area-inset-left: env(safe-area-inset-left, 0px);
+}
+
+html,
+[data-generated-space-root] {
+  height: 100%;
+  min-height: 100%;
+}
+
+[data-generated-space-root] {
+  inset: 0;
+  overflow: auto;
+  position: fixed;
+  scrollbar-width: none;
+}
+
+.hatch-space-root[data-hatch-space-root] {
+  --hatch-space-bottom-padding: env(safe-area-inset-bottom, 0px);
+  box-sizing: border-box;
+  min-height: calc(100dvh + var(--hatch-space-bottom-padding));
+  padding-bottom: var(--hatch-space-bottom-padding);
+  background: var(--bg, #f4f7fb);
+  color: var(--text, #0f172a);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hatch-space-root[data-hatch-space-root] {
+    background: var(--bg, #0c111b);
+    color: var(--text, #e5eef9);
+  }
+}
+
+[data-generated-space-root]::-webkit-scrollbar {
+  display: none;
+}

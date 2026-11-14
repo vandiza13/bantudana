@@ -1,0 +1,25 @@
+# Dependensi & hasil build
+node_modules/
+client/dist/
+dist/
+
+# Konfigurasi lokal / rahasia — JANGAN commit
+.env
+.env.local
+.env.*.local
+.vercel/
+
+# Database lokal (hanya untuk smoke test)
+*.db
+*.db-shm
+*.db-wal
+data/
+
+# Info build TypeScript
+.tsbuildinfo
+client/.tsbuildinfo.client
+server/.tsbuildinfo.server
+api/.tsbuildinfo.api
+
+# OS / editor
+.DS_Store

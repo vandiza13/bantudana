@@ -1,0 +1,1 @@
+{"compilerOptions":{"jsx":"react-jsx","lib":["ES2022","DOM"],"paths":{"@space/server/*":["../server/src/*"]},"rootDir":"..","tsBuildInfoFile":"./.tsbuildinfo.client","types":["react","react-dom"]},"extends":"../tsconfig.base.json","include":["src/**/*","../server/src/actions.ts","../server/src/schema.ts","../server/src/space-shim.ts"]}
